@@ -7,7 +7,7 @@ import ContactForm from "./ContactForm";
 export default function ContactSection() {
     return (
         <section className="py-32 px-8 relative z-10 w-full max-w-7xl mx-auto">
-            <div className="glass-card rounded-[3rem] p-12 md:p-20 border border-white/10 relative overflow-hidden">
+            <div className="glass-card rounded-[3rem] p-12 md:p-20 border border-foreground/10 relative overflow-hidden shadow-2xl">
 
                 {/* Decorative Gradients */}
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none" />

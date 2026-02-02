@@ -46,7 +46,10 @@ export default function ServicesSection() {
     const [hoveredCard, setHoveredCard] = useState<string | null>(null);
 
     return (
-        <section className="py-24 px-8 relative z-10 w-full max-w-7xl mx-auto">
+        <section className="py-24 px-8 relative overflow-hidden w-full max-w-7xl mx-auto">
+            {/* Trust Background Pattern */}
+            <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, var(--color-primary) 1px, transparent 0)', backgroundSize: '40px 40px' }} />
+
             <div className="mb-16 text-center">
                 <motion.h2
                     className="text-4xl md:text-5xl font-display font-bold mb-4"
@@ -81,10 +84,10 @@ export default function ServicesSection() {
                         onMouseLeave={() => setHoveredCard(null)}
                         className={`
                             group relative p-8 rounded-2xl 
-                            bg-white
-                            border transition-all duration-300
+                            bg-surface
+                            border transition-all duration-500
                             ${hoveredCard === service.id
-                                ? 'border-primary/40 shadow-xl'
+                                ? 'border-primary shadow-[0_20px_50px_rgba(8,97,242,0.1)]'
                                 : 'border-foreground/5'
                             }
                             hover:scale-[1.02]

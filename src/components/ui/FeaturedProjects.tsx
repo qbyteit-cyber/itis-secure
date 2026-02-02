@@ -73,8 +73,8 @@ export default function FeaturedProjects() {
                             transition={{ delay: index * 0.15 }}
                             className="group relative"
                         >
-                            {/* Card Background with Light Shadows */}
-                            <div className="absolute inset-0 bg-white border border-foreground/5 rounded-2xl transition-all duration-500 group-hover:bg-slate-50/50 group-hover:border-primary/20 group-hover:shadow-xl" />
+                            {/* Card Background with Dynamic Theming */}
+                            <div className="absolute inset-0 bg-surface border border-foreground/5 rounded-2xl transition-all duration-500 group-hover:bg-surface-hover group-hover:border-primary/20 group-hover:shadow-[0_20px_50px_rgba(8,97,242,0.1)]" />
 
                             <div className="relative p-8 flex flex-col h-full">
                                 <div className="mb-6 flex justify-between items-start">
@@ -96,9 +96,9 @@ export default function FeaturedProjects() {
                                 </p>
 
                                 <div className="pt-6 border-t border-foreground/5 mt-auto flex items-center justify-between">
-                                    <div>
-                                        <p className="text-xs text-foreground/30 uppercase tracking-tighter mb-1">Key Impact</p>
-                                        <p className="text-foreground font-semibold text-sm">{project.impact}</p>
+                                    <div className="bg-primary/5 px-3 py-2 rounded-lg border border-primary/10">
+                                        <p className="text-[10px] text-primary uppercase tracking-tighter mb-0.5 font-bold">Verified Impact</p>
+                                        <p className="text-foreground font-bold text-sm tracking-tight">{project.impact}</p>
                                     </div>
                                     <button className="text-foreground/40 group-hover:text-primary transition-colors p-2 -mr-2">
                                         <ExternalLink size={18} />

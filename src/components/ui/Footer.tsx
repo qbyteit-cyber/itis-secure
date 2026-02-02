@@ -7,9 +7,30 @@ export default function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="relative z-10 w-full border-t border-foreground/5 bg-slate-50">
-            <div className="max-w-7xl mx-auto px-8 py-16">
+        <footer className="relative z-10 w-full border-t border-foreground/5 bg-surface transition-colors duration-300">
+            <div className="max-w-7xl mx-auto px-8 pt-20 pb-16">
+                {/* Pre-footer Trust Section */}
+                <div className="flex flex-col lg:flex-row items-center justify-between gap-12 pb-16 mb-16 border-b border-foreground/5">
+                    <div className="text-center lg:text-left">
+                        <h2 className="text-3xl font-display font-bold text-foreground mb-4">
+                            Ready to secure your <span className="text-primary">compliance roadmap?</span>
+                        </h2>
+                        <p className="text-foreground/60 max-w-lg">
+                            Join 50+ automotive leaders who trust ITIS Secure for their TISAX and ISO 27001 certifications.
+                        </p>
+                    </div>
+                    <div className="flex flex-col sm:flex-row gap-4">
+                        <button className="px-8 py-4 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 transition-all shadow-[0_10px_30px_rgba(8,97,242,0.3)] hover:scale-105 active:scale-95">
+                            Book Audit Readiness Check
+                        </button>
+                        <button className="px-8 py-4 bg-foreground/5 text-foreground font-bold rounded-xl hover:bg-foreground/10 transition-all border border-foreground/10">
+                            View Case Studies
+                        </button>
+                    </div>
+                </div>
+
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+
                     {/* Company Info */}
                     <div>
                         <h3 className="text-xl font-display font-bold text-foreground mb-4">

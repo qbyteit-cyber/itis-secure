@@ -79,7 +79,7 @@ export default function FAQSection() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: index * 0.05 }}
-                        className="glass-card rounded-xl overflow-hidden border border-white/10 hover:border-primary/20 transition-all"
+                        className="glass-card rounded-xl overflow-hidden border border-foreground/10 hover:border-primary/20 transition-all"
                     >
                         <button
                             onClick={() => toggleFAQ(index)}

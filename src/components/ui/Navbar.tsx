@@ -33,7 +33,8 @@ export default function Navbar() {
                 transition={{ duration: 0.3 }}
                 className="fixed top-0 left-0 right-0 z-50 px-6 py-4"
             >
-                <div className="max-w-7xl mx-auto glass-card rounded-2xl px-6 py-4 border border-white/10">
+                <div className="max-w-7xl mx-auto glass-card rounded-2xl px-6 py-4 border border-foreground/10 shadow-lg transition-all duration-300">
+
                     <div className="flex items-center justify-between">
                         {/* Logo */}
                         <Link href="/" className="flex items-center">
