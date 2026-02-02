@@ -64,7 +64,7 @@ export default function Home() {
         >
           <button
             onClick={() => setCalculatorOpen(true)}
-            className="px-10 py-5 bg-transparent border border-primary text-primary font-bold text-lg rounded-lg hover:bg-primary/5 transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(0,209,255,0.2)] active:scale-95"
+            className="px-10 py-5 bg-transparent border border-primary text-primary font-bold text-lg rounded-lg hover:bg-primary/5 transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(8, 97, 242, 0.2)] active:scale-95"
           >
             Start Assessment
           </button>

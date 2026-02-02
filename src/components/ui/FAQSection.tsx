@@ -127,7 +127,7 @@ export default function FAQSection() {
                 <p className="text-white/60 mb-4">Still have questions?</p>
                 <a
                     href="#contact"
-                    className="inline-flex items-center gap-2 px-8 py-4 bg-transparent border border-primary text-primary font-bold rounded-lg hover:bg-primary/5 hover:shadow-[0_0_30px_rgba(0,209,255,0.2)] transition-all"
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-transparent border border-primary text-primary font-bold rounded-lg hover:bg-primary/5 hover:shadow-[0_0_30px_rgba(8,97,242,0.2)] transition-all"
                 >
                     Contact Our Experts
                 </a>

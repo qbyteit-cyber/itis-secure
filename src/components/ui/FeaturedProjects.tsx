@@ -74,7 +74,7 @@ export default function FeaturedProjects() {
                             className="group relative"
                         >
                             {/* Card Background with Glassmorphism */}
-                            <div className="absolute inset-0 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl transition-all duration-500 group-hover:bg-white/[0.08] group-hover:border-primary/30 group-hover:shadow-[0_0_40px_rgba(0,209,255,0.1)]" />
+                            <div className="absolute inset-0 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl transition-all duration-500 group-hover:bg-white/[0.08] group-hover:border-primary/30 group-hover:shadow-[0_0_40px_rgba(8,97,242,0.1)]" />
 
                             <div className="relative p-8 flex flex-col h-full">
                                 <div className="mb-6 flex justify-between items-start">

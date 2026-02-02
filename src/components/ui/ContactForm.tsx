@@ -162,7 +162,7 @@ export default function ContactForm() {
                 <button
                     type="submit"
                     disabled={status === "loading"}
-                    className="w-full px-8 py-4 bg-transparent border border-primary text-primary font-bold rounded-lg hover:bg-primary/5 transition-all hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(0,209,255,0.2)] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    className="w-full px-8 py-4 bg-transparent border border-primary text-primary font-bold rounded-lg hover:bg-primary/5 transition-all hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(8,97,242,0.2)] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                     {status === "loading" ? (
                         <>

@@ -54,7 +54,7 @@ export default function Navbar() {
                                     {link.label}
                                 </a>
                             ))}
-                            <button className="px-6 py-2 bg-transparent border border-primary text-primary font-bold rounded-lg hover:bg-primary/5 hover:shadow-[0_0_20px_rgba(0,209,255,0.2)] transition-all text-sm">
+                            <button className="px-6 py-2 bg-transparent border border-primary text-primary font-bold rounded-lg hover:bg-primary/5 hover:shadow-[0_0_20px_rgba(8,97,242,0.2)] transition-all text-sm">
                                 Get Started
                             </button>
                         </div>
@@ -97,7 +97,7 @@ export default function Navbar() {
                                         {link.label}
                                     </a>
                                 ))}
-                                <button className="w-full px-6 py-3 bg-transparent border border-primary text-primary font-bold rounded-lg hover:bg-primary/5 hover:shadow-[0_0_20px_rgba(0,209,255,0.2)] transition-all mt-2">
+                                <button className="w-full px-6 py-3 bg-transparent border border-primary text-primary font-bold rounded-lg hover:bg-primary/5 hover:shadow-[0_0_20px_rgba(8,97,242,0.2)] transition-all mt-2">
                                     Get Started
                                 </button>
                             </div>
