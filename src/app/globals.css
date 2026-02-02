@@ -1,25 +1,43 @@
 @import "tailwindcss";
 
 :root {
-  /* Core Colors - Light Precision Aesthetic */
-  --background: #FFFFFF;
-  --foreground: #0F172A;
-  /* Slate 900 */
-
-  /* Brand Colors - High Trust */
+  /* Common Brand Colors */
   --color-primary: #0861F2;
   --color-secondary: #C9A063;
   --color-accent: #0861F2;
 
-  /* Surfacing - Structured depth */
+  /* Light Theme */
+  --background: #FFFFFF;
+  --foreground: #0F172A;
   --color-surface: #F8FAFC;
-  /* Slate 50 */
   --color-surface-hover: #F1F5F9;
-  /* Slate 100 */
-
-  /* Text hierarchy */
   --color-muted: #64748B;
-  /* Slate 500 */
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(15, 23, 42, 0.1);
+  --glass-card-bg: #FFFFFF;
+  --glass-card-border: rgba(15, 23, 42, 0.08);
+  --glass-card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --fog-color: #FFFFFF;
+}
+
+.dark {
+  /* Dark Theme */
+  --background: #020617;
+  /* Slate 950 */
+  --foreground: #F8FAFC;
+  /* Slate 50 */
+  --color-surface: #0F172A;
+  /* Slate 900 */
+  --color-surface-hover: #1E293B;
+  /* Slate 800 */
+  --color-muted: #94A3B8;
+  /* Slate 400 */
+  --glass-bg: rgba(2, 6, 23, 0.7);
+  --glass-border: rgba(248, 250, 252, 0.1);
+  --glass-card-bg: #0F172A;
+  --glass-card-border: rgba(248, 250, 252, 0.08);
+  --glass-card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --fog-color: #020617;
 }
 
 @theme inline {
@@ -41,25 +59,26 @@ body {
   color: var(--foreground);
   font-family: var(--font-inter), sans-serif;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Utilities - Light Mode Glassmorphism */
+/* Utilities - Glassmorphism */
 .glass {
-  background: rgba(255, 255, 255, 0.7);
+  background: var(--glass-bg);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(15, 23, 42, 0.1);
+  border: 1px solid var(--glass-border);
 }
 
 .glass-card {
-  background: #FFFFFF;
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  background: var(--glass-card-bg);
+  border: 1px solid var(--glass-card-border);
+  box-shadow: var(--glass-card-shadow);
 }
 
 ::selection {
   background: var(--color-primary);
-  color: #000;
+  color: #fff;
 }
 
 /* Custom Animation Utilities */
@@ -119,9 +138,9 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 12px;
-  background: rgba(15, 23, 42, 0.03);
-  border: 1px solid rgba(15, 23, 42, 0.05);
-  color: rgba(15, 23, 42, 0.4);
+  background: var(--color-surface);
+  border: 1px solid var(--glass-card-border);
+  color: var(--color-muted);
   transition: all 0.3s ease;
 }
 

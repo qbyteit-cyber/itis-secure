@@ -3,6 +3,7 @@ import { Inter, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/providers/SmoothScroll";
 import Navbar from "@/components/ui/Navbar";
+import { ThemeProvider } from "@/components/providers/ThemeProvider";
 
 // Optimize fonts - Enterprise typography
 const inter = Inter({
@@ -104,8 +105,10 @@ export default function RootLayout({
           Skip to main content
         </a>
         <SmoothScroll>
-          <Navbar />
-          {children}
+          <ThemeProvider>
+            <Navbar />
+            {children}
+          </ThemeProvider>
         </SmoothScroll>
       </body>
     </html>

@@ -3,6 +3,7 @@
 import { useRef, useMemo } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Float } from "@react-three/drei";
+import { useTheme } from "@/components/providers/ThemeProvider";
 import * as THREE from "three";
 
 function ParticleNetwork(props: any) {
@@ -73,6 +74,9 @@ function CyberShield() {
 }
 
 export default function SecurityMesh() {
+    const { theme } = useTheme();
+    const fogColor = theme === "light" ? "#FFFFFF" : "#020617";
+
     return (
         <div className="absolute inset-0 z-0 h-full w-full">
             <Canvas
@@ -80,7 +84,7 @@ export default function SecurityMesh() {
                 gl={{ antialias: true, alpha: true }}
                 dpr={[1, 2]} // Handle high-DPI screens
             >
-                <fog attach="fog" args={['#FFFFFF', 5, 20]} />
+                <fog attach="fog" args={[fogColor, 5, 20]} />
                 <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
                     <ParticleNetwork />
                     <CyberShield />

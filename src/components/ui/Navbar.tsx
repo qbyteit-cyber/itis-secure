@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import { ThemeToggle } from "./ThemeToggle";
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -43,8 +44,7 @@ export default function Navbar() {
                             />
                         </Link>
 
-                        {/* Desktop Navigation */}
-                        <div className="hidden md:flex items-center gap-8">
+                        <div className="hidden md:flex items-center gap-6">
                             {navLinks.map((link) => (
                                 <a
                                     key={link.href}
@@ -54,23 +54,29 @@ export default function Navbar() {
                                     {link.label}
                                 </a>
                             ))}
-                            <button className="px-6 py-2 bg-transparent border border-primary text-primary font-bold rounded-lg hover:bg-primary/5 hover:shadow-[0_0_20px_rgba(8,97,242,0.2)] transition-all text-sm">
-                                Get Started
-                            </button>
+                            <div className="flex items-center gap-4 ml-4 pl-4 border-l border-foreground/10">
+                                <ThemeToggle />
+                                <button className="px-6 py-2 bg-transparent border border-primary text-primary font-bold rounded-lg hover:bg-primary/5 hover:shadow-[0_0_20px_rgba(8,97,242,0.2)] transition-all text-sm">
+                                    Get Started
+                                </button>
+                            </div>
                         </div>
 
-                        {/* Mobile Menu Button */}
-                        <button
-                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                            className="md:hidden p-2 hover:bg-foreground/5 rounded-lg transition-colors"
-                            aria-label="Toggle menu"
-                        >
-                            {isMobileMenuOpen ? (
-                                <X className="w-6 h-6" />
-                            ) : (
-                                <Menu className="w-6 h-6" />
-                            )}
-                        </button>
+                        {/* Mobile Menu Button & Toggle */}
+                        <div className="md:hidden flex items-center gap-3">
+                            <ThemeToggle />
+                            <button
+                                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                                className="p-2 hover:bg-foreground/5 rounded-lg transition-colors"
+                                aria-label="Toggle menu"
+                            >
+                                {isMobileMenuOpen ? (
+                                    <X className="w-6 h-6" />
+                                ) : (
+                                    <Menu className="w-6 h-6" />
+                                )}
+                            </button>
+                        </div>
                     </div>
                 </div>
             </motion.nav>
